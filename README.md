@@ -1,4 +1,4 @@
-# Serverless Shopping Cart Microservice
+# Amazon Serverless Application Model (SAM)
 Amazon Serverless Application Model (SAM) is an open-source framework for building serverless applications. It provides shorthand syntax to express functions, APIs, databases, and event source mappings. With just a few lines per resource, you can define the application you want and model it using YAML. During deployment, SAM transforms and expands the SAM syntax into AWS CloudFormation syntax, enabling you to build serverless applications faster.
 
 AWS SAM simplifies the development, deployment, and management of serverless applications on the AWS platform. It provides a standardised framework, faster deployment, local testing capabilities, resource management, seamless Integration with Development Tools, and a supportive community, making it a valuable tool for building serverless applications efficiently and effectively.
@@ -9,7 +9,10 @@ Using nested applications, you can rapidly build highly sophisticated serverless
 
 ## Target architecture 
 
+
 ![SAM-A](./images/Serverless_Application_Model_A.png)
+
+In this solution setup, AWS SAM CLI serves as the interface for AWS CloudFormation stacks. AWS SAM templates automatically deploy nested applications. The parent SAM template calls the child templates, and the parent CloudFormation stack deploys the child stacks. Each child stack builds the AWS resources that are defined in the AWS SAM CloudFormation templates
 
 ![SAM-B](./images/Serverless_Application_Model_B.png)
 
