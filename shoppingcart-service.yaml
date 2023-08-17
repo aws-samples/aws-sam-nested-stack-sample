@@ -46,7 +46,7 @@ Resources:
   UtilsLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      ContentUri: ./layers/
+      ContentUri: ./sam_stacks/
       CompatibleRuntimes:
         - python3.9
     Metadata:
