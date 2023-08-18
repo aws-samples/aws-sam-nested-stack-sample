@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "shopping-cart-nested-stack"
+resolve_s3 = true
+s3_prefix = "shopping-cart-nested-stack"
+region = "us-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_AUTO_EXPAND"
+disable_rollback = true
+image_repositories = []

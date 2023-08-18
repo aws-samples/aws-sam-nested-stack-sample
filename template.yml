@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  auth-resources
+
+  SAM Template for auth resources
+
+Resources:
+    Auth:
+      Type: AWS::Serverless::Application
+      Properties:
+        Location: auth.yaml
+    Product:
+      Type: AWS::Serverless::Application
+      Properties:
+        Location: product-mock.yaml
+        Parameters:
+          AllowedOrigin: 'http://localhost:8080'
+      DependsOn: Auth
+    Shopping:
+      Type: AWS::Serverless::Application
+      Properties:
+        Location: shoppingcart-service.yaml
+        Parameters:
+          AllowedOrigin: 'http://localhost:8080'
+      DependsOn: Product
